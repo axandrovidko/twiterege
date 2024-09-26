@@ -93,8 +93,8 @@
                         </div>
                     </div>
                     <hr>
+                    @foreach ($users as $user)
                     <div class="mt-3">
-                        @foreach ($users as $user)
                         <div class="card">
                             <div class="px-3 pt-4 pb-2">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -158,8 +158,8 @@
                                 </div>
                             </div>
                         </div>
-                        @endforeach
                     </div>
+                    @endforeach
                 </div>
                 <div class="col-3">
                     <div class="card">
