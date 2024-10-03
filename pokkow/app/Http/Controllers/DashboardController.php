@@ -4,9 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Post;
 class DashboardController extends Controller
 {
     public function index(){
+
+        Post::create([
+            'content' => 'test Lorem ipsum',
+            'likes' => 15,
+        ]);
+
         $users = [
             [
                 "name" => "Rudo",
@@ -23,7 +30,8 @@ class DashboardController extends Controller
         ];
         return view('dashboard',
             [
-                "users" => $users
+                "users" => $users,
+                "posts" => Post::all(),
             ]
         );
     }
